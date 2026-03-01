@@ -9,7 +9,7 @@ document.getElementById("password").value;
 
 // SEND DATA TO RENDER SERVER
 
-fetch("https://gamehub-ey1e.onrender.com/login",{
+fetch("https://gamehub-ey1e.onrender.com/login.html",{
 
 method:"POST",
 
@@ -81,5 +81,6 @@ pass.type="password";
 function goSignup(){
 
 window.location.href="signup.html";
+
 
 }
