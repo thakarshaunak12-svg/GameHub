@@ -45,7 +45,7 @@ return;
 
 // SEND DATA TO MONGODB SERVER
 
-fetch("http://localhost:3000/signup",{
+fetch("https://gamehub-ey1e.onrender.com/",{
 
 method:"POST",
 
@@ -110,5 +110,6 @@ pass.type=(pass.type=="password")?"text":"password";
 function goLogin(){
 
 window.location.href="login.html";
+
 
 }
