@@ -1,65 +1,53 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const path = require("path");
 require("dotenv").config();
 
 const app = express();
 
+/* Middlewares */
 
-// Middlewares
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
+/* Serve Frontend */
 
-// ⭐ Serve Frontend Files
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
+/* MongoDB */
 
-// MongoDB Connection
 mongoose.connect(process.env.MONGO_URI)
-.then(() => {
-    console.log("✅ MongoDB Connected");
-})
-.catch((err) => {
-    console.log("❌ Mongo Error:", err);
-});
+.then(() => console.log("✅ MongoDB Connected"))
+.catch(err => console.log("❌ Mongo Error:", err));
 
 
-// User Schema
+/* User Schema */
+
 const UserSchema = new mongoose.Schema({
 
-    fullname:String,
-    email:String,
-    username:String,
-    age:Number,
-    location:String,
-    password:String
+fullname:String,
+email:String,
+username:String,
+age:Number,
+location:String,
+password:String
 
 });
-
 
 const User = mongoose.model("users",UserSchema);
 
 
-
-// ======================
-// SIGNUP API
-// ======================
+/* ======================
+SIGNUP
+====================== */
 
 app.post("/signup", async (req,res)=>{
 
 try{
 
-let user = new User({
-
-fullname:req.body.fullname,
-email:req.body.email,
-username:req.body.username,
-age:req.body.age,
-location:req.body.location,
-password:req.body.password
-
-});
+let user = new User(req.body);
 
 await user.save();
 
@@ -85,10 +73,9 @@ message:"Error Saving User"
 });
 
 
-
-// ======================
-// LOGIN API
-// ======================
+/* ======================
+LOGIN
+====================== */
 
 app.post("/login", async (req,res)=>{
 
@@ -100,7 +87,6 @@ username:req.body.username,
 password:req.body.password
 
 });
-
 
 if(user){
 
@@ -136,24 +122,24 @@ success:false
 });
 
 
-
-// ======================
-// Home Route Fix
-// ======================
+/* ======================
+HOME
+====================== */
 
 app.get("/",(req,res)=>{
 
-res.sendFile(__dirname + "/public/index.html");
+res.sendFile(
+path.join(__dirname,"public","index.html")
+);
 
 });
 
 
+/* ======================
+SERVER
+====================== */
 
-// ======================
-// Server Start
-// ======================
-
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 
 app.listen(PORT,()=>{
 
