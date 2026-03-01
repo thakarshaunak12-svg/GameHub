@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Sign Up</title>
+
+<link rel="stylesheet" href="login.css">
+<link rel="stylesheet" href="common.css">
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+<h1>🎮 Game Hub</h1>
+
+<h2>Sign Up</h2>
+
+
+<input type="text" id="fullname" placeholder="Full Name">
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="text" id="username" placeholder="Username">
+
+<input type="number" id="age" placeholder="Age">
+
+<input type="text" id="location" placeholder="Location">
+
+
+<div class="password-box">
+
+<input
+type="password"
+id="password"
+placeholder="Password"
+>
+
+<span class="eye" onclick="togglePassword()">👁</span>
+
+</div>
+
+
+
+<div class="password-box">
+
+<input
+type="password"
+id="confirmPassword"
+placeholder="Confirm Password"
+>
+
+<span class="eye" onclick="toggleConfirmPassword()">👁</span>
+
+</div>
+
+
+
+<button onclick="signup()">
+Create Account
+</button>
+
+
+<p id="message" class="message"></p>
+
+
+<button onclick="goLogin()">
+Back to Login
+</button>
+
+
+</div>
+
+
+<script src="signup.js"></script>
+
+</body>
+
+</html>

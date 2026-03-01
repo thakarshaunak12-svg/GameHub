@@ -1,0 +1,146 @@
+/* ===== SUDOKU PAGE ONLY ===== */
+
+/* Board Layout */
+
+.board{
+
+display:grid;
+
+grid-template-columns:repeat(9,45px);
+
+gap:5px;
+
+justify-content:center;
+
+margin-top:25px;
+
+}
+
+
+/* Sudoku Cells Override common.css */
+
+.board .cell{
+
+width:45px;
+
+height:45px;
+
+background:#020617;
+
+color:#ff00ff;
+
+border:1px solid rgba(0,247,255,0.5);
+
+text-align:center;
+
+font-size:18px;
+
+border-radius:8px;
+
+outline:none;
+
+transition:0.2s;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+
+/* Hover */
+
+.board .cell:hover{
+
+border:1px solid #00f7ff;
+
+box-shadow:0 0 8px rgba(0,247,255,0.6);
+
+}
+
+
+/* Selected */
+
+.board .cell:focus{
+
+background:#000814;
+
+box-shadow:0 0 12px #ff00f7;
+
+}
+
+
+/* Fixed Numbers */
+
+.board .cell[readonly]{
+
+background:#071c2f;
+
+color:#4ade80;
+
+font-weight:bold;
+
+border:1px solid rgba(74,222,128,0.6);
+
+}
+
+
+/* Sudoku Title spacing */
+
+.card h2{
+
+margin-bottom:25px;
+
+}
+
+/* Difficulty Section */
+
+.difficulty-box{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:15px;
+
+margin-top:15px;
+
+}
+
+
+/* Dropdown Style */
+
+.difficulty-box select{
+
+background:#020617;
+
+color:#00f7ff;
+
+border:1px solid #00f7ff;
+
+padding:12px 20px;
+
+border-radius:10px;
+
+outline:none;
+
+font-size:16px;
+
+box-shadow:0 0 10px rgba(0,247,255,0.5);
+
+}
+
+
+/* Match Button Height */
+
+.difficulty-box button{
+
+margin-top:0;
+
+width:250px;
+
+}

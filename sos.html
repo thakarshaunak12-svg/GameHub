@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>SOS Game</title>
+
+<link rel="stylesheet" href="sos.css">
+
+<link rel="stylesheet" href="common.css">
+
+</head>
+
+
+<body>
+
+
+<a href="home.html" class="homeBtn">
+🏠 Home
+</a>
+
+
+<!-- SETUP SCREEN -->
+
+<div id="setup" class="setupBox">
+
+<h1>SOS Game Setup</h1>
+
+<h3>Player 1 : Shaunak</h3>
+
+
+<label>Players (2-10)</label>
+
+<br>
+
+<input type="number"
+id="players"
+value="2"
+min="2"
+max="10">
+
+
+<br><br>
+
+
+<label>Board Size (3-12)</label>
+
+<br>
+
+<input type="number"
+id="boardSize"
+value="3"
+min="3"
+max="12">
+
+
+<br><br>
+
+
+<button id="nextBtn">
+Next
+</button>
+
+
+<div id="playerNames"></div>
+
+
+</div>
+
+
+
+<!-- GAME SCREEN -->
+
+
+<div id="game" class="hidden">
+
+
+<div class="gameLayout">
+
+
+<!-- LEFT BOARD -->
+
+
+<div>
+
+<h2 id="turnText"></h2>
+
+<div class="letterSelect">
+
+<button id="selectS" onclick="selectLetter('S')">
+Select S
+</button>
+
+<button id="selectO" onclick="selectLetter('O')">
+Select O
+</button>
+
+</div>
+
+<br>
+
+<div id="board"></div>
+
+</div>
+
+
+
+<!-- RIGHT SIDE -->
+
+
+<div class="rightPanel">
+
+<h2>Scores</h2>
+
+<div id="scoreBox"></div>
+
+<h2 id="winner"></h2>
+
+<br>
+
+<button onclick="resetGame()" class="resetBtn">
+Reset Game
+</button>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<script src="sos.js"></script>
+
+</body>
+
+</html>

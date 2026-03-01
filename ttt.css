@@ -1,0 +1,119 @@
+body {
+
+    font-family: 'Segoe UI', sans-serif;
+
+    text-align: center;
+
+    background: linear-gradient(135deg,#1f1c2c,#928dab);
+
+    color: white;
+
+    margin: 0;
+
+}
+
+
+
+.setup,.game {
+
+    margin-top: 60px;
+
+}
+
+
+
+input {
+
+    padding: 12px;
+
+    width: 220px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    margin: 10px;
+
+}
+
+
+
+button {
+
+    padding: 12px 25px;
+
+    margin: 10px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+
+button:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+
+button:active {
+
+    transform: scale(0.95);
+
+}
+
+
+
+.board {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,120px);
+
+    gap: 10px;
+
+    justify-content: center;
+
+    margin: 30px auto;
+
+}
+
+
+
+.cell {
+
+    width: 120px;
+
+    height: 120px;
+
+    font-size: 40px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+
+.selectedSymbol{
+
+background:rgb(110, 255, 6);
+
+color:white;
+
+}

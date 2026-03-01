@@ -1,0 +1,100 @@
+body {
+
+margin:0;
+
+font-family:Segoe UI;
+
+background:linear-gradient(135deg,#1d4350,#a43931);
+
+color:white;
+
+text-align:center;
+
+}
+
+
+.container {
+
+margin-top:80px;
+
+}
+
+
+h1 {
+
+font-size:40px;
+
+}
+
+
+.choices button{
+
+padding:15px 30px;
+
+margin:15px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+
+.choices button:hover{
+
+transform:scale(1.1);
+
+}
+
+
+#result{
+
+margin-top:30px;
+
+font-size:24px;
+
+}
+
+
+.scoreboard{
+
+margin-top:20px;
+
+font-size:20px;
+
+}
+
+
+.back-btn{
+
+margin-top:30px;
+
+padding:12px 25px;
+
+border-radius:8px;
+
+border:none;
+
+cursor:pointer;
+
+background:black;
+
+color:white;
+
+}
+
+.pattern {
+  background-color: yellow;
+  border: 3px solid red;
+}
+button:hover{
+
+background:#bbb;
+
+}

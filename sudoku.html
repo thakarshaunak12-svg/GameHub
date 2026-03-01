@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="sudoku.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card" id="setupCard">
+        <h1 id="helloText"></h1>
+
+        <h3>Select Difficulty</h3>
+        <div class="difficulty-box">
+
+        <select id="difficulty">
+        <option value="50">Easy</option>
+        <option value="40">Medium</option>
+        <option value="30">Hard</option>
+        <option value="25">Extreme</option>
+        </select>
+
+        </div>
+
+
+        <button class="play-btn" onclick="startGame()">Start Game</button>
+        <button class="back-btn" onclick="goHome()">🏠 Back Home</button>
+    </div>
+
+    <div class="card" id="gameCard" style="display:none;">
+        <h2>Sudoku</h2>
+        <div id="board" class="board"></div>
+        <button class="back-btn" onclick="goHome()">🏠 Back Home</button>
+    </div>
+
+</div>
+
+<script src="sudoku.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Bingo Game</title>
+<link rel="stylesheet" href="bingo.css">
+<link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+<button class="home-btn" onclick="goHome()">
+🏠 Home
+</button>
+<!-- SETUP SCREEN -->
+<div class="container" id="setup">
+    <h1>🎯 Bingo Setup</h1>
+    <h3>
+    Player 1 :
+    <span id="player1Name"></span>
+    </h3>
+    <p>How many players (2-10)</p>
+    <input
+    id="playerCount"
+    type="number"
+    min="2"
+    max="10">
+    <br>
+    <button class="primary-btn"onclick="askNames()">
+        Next
+    </button>
+    <div id="otherPlayers"></div>
+</div>
+<!-- GAME SCREEN -->
+<div id="game" class="hidden">
+    <div class="topCenter">
+        <h1>🎯 Bingo</h1>
+        <h2 id="winnerText"></h2>
+    </div>
+    <div id="boards"></div>
+    <div class="bottomCenter">
+        <div class="call-section">
+            <input
+            id="numberInput"
+            type="number"
+            min="1"
+            max="25"
+            placeholder="1-25">
+            <div>
+                <button class="primary-btn"onclick="callNumber()">
+                    Call Number
+                </button>
+                <div id="turnText" class="turn-text">
+                Player Turn
+                </div>
+            </div>
+        </div>
+        <div id="calledNumber"></div>
+        </div>
+    </div>
+<script src="bingo.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+
+    <link rel="stylesheet" href="ttt.css">
+    <link rel="stylesheet" href="common.css">
+
+</head>
+
+<body>
+
+<div class="setup" id="setup">
+
+    <h2>Game Setup</h2>
+
+    <p id="player1Name"></p>
+
+    <input type="text" id="player2" placeholder="Enter Player 2 Name">
+
+    <div>
+        <label>Select Symbol:</label>
+
+        <button onclick="selectSymbol('X')">X</button>
+
+        <button onclick="selectSymbol('O')">O</button>
+    </div>
+
+    <button onclick="startGame()">Start Game</button>
+
+    <button onclick="goHome()">Back Home</button>
+
+</div>
+
+
+
+<div class="game" id="game" style="display:none;">
+
+    <h2 id="turnText"></h2>
+    <h2 id="winnerText"></h2>
+
+    <div class="board">
+
+        <button class="cell"></button>
+        <button class="cell"></button>
+        <button class="cell"></button>
+
+        <button class="cell"></button>
+        <button class="cell"></button>
+        <button class="cell"></button>
+
+        <button class="cell"></button>
+        <button class="cell"></button>
+        <button class="cell"></button>
+
+    </div>
+
+    <button onclick="resetGame()">Reset</button>
+
+    <button onclick="goHome()">Back Home</button>
+
+</div>
+
+
+<script src="ttt.js"></script>
+
+</body>
+</html>

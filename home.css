@@ -1,0 +1,122 @@
+body {
+
+margin:0;
+
+font-family:'Segoe UI';
+
+background:linear-gradient(
+135deg,
+#020024,
+#090979,
+#00d4ff
+);
+
+height:100vh;
+
+}
+
+/* Logout Button */
+
+.logout-btn{
+
+position:absolute;
+
+top:20px;
+
+right:20px;
+
+padding:10px 20px;
+
+border-radius:10px;
+
+border:none;
+
+cursor:pointer;
+
+background:linear-gradient(90deg,#ff004c,#ff7a00);
+
+color:white;
+
+}
+
+
+/* Center */
+
+.main-container{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+}
+
+
+/* Card */
+
+.card{
+
+background:rgba(255,255,255,0.05);
+
+padding:50px;
+
+border-radius:30px;
+
+backdrop-filter:blur(15px);
+
+color:white;
+
+width:420px;
+
+text-align:center;
+
+border:1px solid rgba(255,255,255,0.2);
+
+box-shadow:0 0 40px rgba(0,255,255,0.3);
+
+}
+
+
+/* Buttons */
+
+.play-btn{
+
+width:100%;
+
+padding:16px;
+
+margin:12px 0;
+
+border-radius:12px;
+
+border:none;
+
+font-size:16px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+background:linear-gradient(
+90deg,
+#00ffff,
+#7a00ff
+);
+
+color:white;
+
+transition:0.3s;
+
+}
+
+
+.play-btn:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 20px cyan;
+
+}

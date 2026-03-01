@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stone Paper Scissors</title>
+
+<link rel="stylesheet" href="sps.css">
+<link rel="stylesheet" href="common.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>✊ Stone Paper Scissors</h1>
+
+<h2 id="welcome"></h2>
+
+
+<div class="choices">
+
+<button onclick="play('stone')">
+✊ Stone
+</button>
+
+<button onclick="play('paper')">
+✋ Paper
+</button>
+
+<button onclick="play('scissors')">
+✌ Scissors
+</button>
+
+</div>
+
+
+<h2 id="result">
+
+Make your move!
+
+</h2>
+
+
+<div class="scoreboard">
+
+<p>
+You:
+<span id="userScore">0</span>
+</p>
+
+<p>
+Computer:
+<span id="compScore">0</span>
+</p>
+
+</div>
+
+
+<button class="back-btn"
+onclick="goHome()">
+
+🏠 Back Home
+
+</button>
+
+
+</div>
+
+
+<script src="sps.js"></script>
+
+</body>
+</html>
