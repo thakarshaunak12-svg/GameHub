@@ -1,15 +1,13 @@
 function login(){
 
-let username =
-document.getElementById("username").value;
+let username=document.getElementById("username").value;
 
-let password =
-document.getElementById("password").value;
+let password=document.getElementById("password").value;
 
 
-// SEND DATA TO RENDER SERVER
+// SEND DATA TO SERVER
 
-fetch("https://gamehub-ey1e.onrender.com/login.html",{
+fetch("https://gamehub-ey1e.onrender.com/login",{
 
 method:"POST",
 
@@ -30,18 +28,13 @@ password:password
 
 .then(data => {
 
-if(data.success){
-
-// SAVE PLAYER NAME
+if(data.status=="success"){
 
 localStorage.setItem("player1",username);
-
-// GO TO HOME PAGE
 
 window.location.href="home.html";
 
 }
-
 else{
 
 alert("Wrong Username or Password");
@@ -64,8 +57,7 @@ console.log(error);
 
 function togglePassword(){
 
-let pass =
-document.getElementById("password");
+let pass=document.getElementById("password");
 
 if(pass.type=="password"){
 pass.type="text";
@@ -81,6 +73,5 @@ pass.type="password";
 function goSignup(){
 
 window.location.href="signup.html";
-
 
 }
