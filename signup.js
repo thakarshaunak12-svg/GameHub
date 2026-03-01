@@ -1,28 +1,13 @@
 function signup(){
 
-let fullname =
-document.getElementById("fullname").value;
-
-let email =
-document.getElementById("email").value;
-
-let username =
-document.getElementById("username").value;
-
-let age =
-document.getElementById("age").value;
-
-let location =
-document.getElementById("location").value;
-
-let password =
-document.getElementById("password").value;
-
-let confirmPassword =
-document.getElementById("confirmPassword").value;
-
-let message =
-document.getElementById("message");
+let fullname=document.getElementById("fullname").value;
+let email=document.getElementById("email").value;
+let username=document.getElementById("username").value;
+let age=document.getElementById("age").value;
+let location=document.getElementById("location").value;
+let password=document.getElementById("password").value;
+let confirmPassword=document.getElementById("confirmPassword").value;
+let message=document.getElementById("message");
 
 
 if(fullname=="" || email=="" || username=="" || age=="" || location=="" || password=="" || confirmPassword==""){
@@ -43,9 +28,9 @@ return;
 }
 
 
-// SEND DATA TO MONGODB SERVER
+// SEND DATA TO SERVER
 
-fetch("https://gamehub-ey1e.onrender.com/",{
+fetch("https://gamehub-ey1e.onrender.com/signup",{
 
 method:"POST",
 
@@ -82,7 +67,6 @@ message.style.color="red";
 
 });
 
-
 }
 
 
@@ -110,6 +94,5 @@ pass.type=(pass.type=="password")?"text":"password";
 function goLogin(){
 
 window.location.href="login.html";
-
 
 }
